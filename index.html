@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Assignment 1</title>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="./styles/style.css">
+    <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Raleway">
+  </head>
+
+  <body>
+    <header class="container background center ">
+      <h2><b>HTML API - Assignment 1</b></h1>
+    </header>
+
+    <!--  form -->
+     <div class="form-container">
+      <form>
+        <h4>TODO App</h4>
+        <label for="task-desc">Task Name</label>
+        <input type="text" id="task-desc" name="taskdesc" placeholder="Task Description" required>
+
+        <label for="level">Dificult Level</label>
+        <select id="level" name="level">
+          <option value="1">Easy</option>
+          <option value="2">Medium</option>
+          <option value="3">Hard</option>
+        </select>
+
+        <fieldset>
+          <legend>Assigned To?</legend>
+          <label for="jen"> Jen
+            <input type="radio" name="assigned-to" id="jen" checked>
+          </label>
+          <label for="thomas"> Thomas
+            <input type="radio" name="assigned-to" id="thomas">
+          </label>
+          <label for="lucy"> Lucy
+            <input type="radio" name="assigned-to" id="lucy">
+          </label>
+        </fieldset>
+        <br>
+        <!-- <input type="submit" value="Add" onclick="alertFunction()" > -->
+        <input type="submit" value="Add" >
+      </form>
+    </div>
+
+    <div class="boxShadow margin">
+      <div class="container">
+        <h3><b>TODO List</b></h3>
+        <div id="list-container">
+          <!-- <h5>Assignment 1, <span class="w3-opacity">Jun 15, 2017</span></h5>
+          <p>task 1...</p> -->
+        </div>
+      </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="container background">
+    	<p>Phong Tran - Assignment 1</p>
+    </footer>
+
+    <script type="text/javascript" src="js/script.js"></script>
+  </body>
+</html>
