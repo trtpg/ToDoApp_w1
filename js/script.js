@@ -1,7 +1,7 @@
 var task1 = {
-  "description": "Intro JavaScript (default)",
+  "description": "study JavaScript (default)",
   "level": "Medium",
-  "assignedTo": "Kim"
+  "assignedTo": "self"
 }
 // var task2 = {
 //   "description": "Intro HTML5 tutorial",
@@ -10,7 +10,7 @@ var task1 = {
 // }
 
 var TODO = {
-  type: "school",
+  type: "misc",
   tasks:[task1]
 }
 
@@ -40,7 +40,10 @@ function drawList() {
     var li = document.createElement("li")
 
     // Add the roof string to the li
-    li.innerHTML = TODO.tasks[i].description
+
+    // li.innerHTML = "<span tyle=color:blue>" + TODO.tasks[i].description + "</span>";
+    li.innerHTML = TODO.tasks[i].description + " - " + TODO.tasks[i].level + " (" + TODO.tasks[i].assignedTo +")"  ;
+
 
     // Append li to ul
     ul.appendChild(li)
@@ -49,16 +52,26 @@ function drawList() {
   // Append the ul to the #list-container
   parent.appendChild(ul)
 
-
-
 }
 
 function taskBuilder() {
   console.log("enter task builder...")
   event.preventDefault();
   var form = document.querySelector("form");
-  console.log(form);
-  var newTask = {description: form.taskdesc.value };
+
+  var whom = getRadioCheckedVal( "assignedTo" );
+  var newTask = {description: form.taskdesc.value, // or document.getElementById("task-desc").value;
+                 level: form.level.value,
+                 assignedTo: whom};
   TODO.tasks.push(newTask);
   drawList();
+}
+
+
+function getRadioCheckedVal(radioName) {
+  var oRadio = document.forms[0].elements[radioName];
+  for(var i = 0; i < oRadio.length; i++)
+  {
+    if(oRadio[i].checked) {return oRadio[i].value; }
+  }
 }

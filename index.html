@@ -3,16 +3,17 @@
   <head>
     <title>Assignment 1</title>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" href="./styles/style.css">
     <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Raleway">
   </head>
 
   <body>
     <header class="container background center ">
-      <h2><b>HTML API - Assignment 1</b></h1>
+      <h2><b>HTML API - Assignment 1</b></h2>
     </header>
 
-    <!--  form -->
+    <!--  New-Task form -->
      <div class="form-container">
       <form>
         <h4>TODO App</h4>
@@ -21,42 +22,43 @@
 
         <label for="level">Dificult Level</label>
         <select id="level" name="level">
-          <option value="1">Easy</option>
-          <option value="2">Medium</option>
-          <option value="3">Hard</option>
+          <option value="Easy">Easy</option>
+          <option value="Medium">Medium</option>
+          <option value="Hard">Hard</option>
         </select>
 
         <fieldset>
           <legend>Assigned To?</legend>
-          <label for="jen"> Jen
-            <input type="radio" name="assigned-to" id="jen" checked>
+          <label>
+            <input type="radio" id="jen"  name="assignedTo" value="Jen" checked> Jen
           </label>
-          <label for="thomas"> Thomas
-            <input type="radio" name="assigned-to" id="thomas">
+          <label> 
+            <input type="radio" id="thomas" name="assignedTo" value="Thomas"> Thomas
           </label>
-          <label for="lucy"> Lucy
-            <input type="radio" name="assigned-to" id="lucy">
+          <label> 
+            <input type="radio" id="lucy" name="assignedTo" value="Lucy"> Lucy
+          </label>
+          <label> 
+            <input type="radio" id="justin" name="assignedTo" value="Justin"> Justin
           </label>
         </fieldset>
         <br>
-        <!-- <input type="submit" value="Add" onclick="alertFunction()" > -->
         <input type="submit" value="Add" >
       </form>
     </div>
 
+	<!--  Tasks List -->
     <div class="boxShadow margin">
       <div class="container">
         <h3><b>TODO List</b></h3>
         <div id="list-container">
-          <!-- <h5>Assignment 1, <span class="w3-opacity">Jun 15, 2017</span></h5>
-          <p>task 1...</p> -->
         </div>
       </div>
     </div>
 
     <!-- Footer -->
     <footer class="container background">
-    	<p>Phong Tran - Assignment 1</p>
+    	<p>PTran - Assignment 1 - Jun 16, 2017</p>
     </footer>
 
     <script type="text/javascript" src="js/script.js"></script>
