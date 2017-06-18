@@ -39,9 +39,7 @@ function drawList() {
     // Create an <li> node
     var li = document.createElement("li")
 
-    // Add the roof string to the li
-
-    // li.innerHTML = "<span tyle=color:blue>" + TODO.tasks[i].description + "</span>";
+    // Add task string to the li
     li.innerHTML = TODO.tasks[i].description + " - " + TODO.tasks[i].level + " (" + TODO.tasks[i].assignedTo +")"  ;
 
 
