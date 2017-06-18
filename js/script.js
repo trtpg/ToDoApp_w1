@@ -65,6 +65,7 @@ function taskBuilder() {
                  assignedTo: whom};
   TODO.tasks.push(newTask);
   drawList();
+  form.reset(); // reset form after submit
 }
 
 
